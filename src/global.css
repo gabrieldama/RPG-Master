@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: #f8f4ec;
+    color: #12263a;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-around;
+    gap: 32px;
+    flex-wrap: wrap;
+}
