@@ -30,18 +30,25 @@
   ],
   "personagens": [
     {
-      "id": "1",
-      "nome": "Aragorn",
+      "nome": "Farbas",
       "classe": "Guerreiro",
-      "raca": "Humano",
-      "nivel": "5"
+      "raca": "Orc",
+      "nivel": "3",
+      "id": "8mDMS1hDuQY"
     },
     {
-      "id": "2",
-      "nome": "Gandalf",
+      "nome": "Limão Jane",
       "classe": "Mago",
-      "raca": "Maia",
-      "nivel": "20"
+      "raca": "Elfo",
+      "nivel": "14",
+      "id": "-0wfdXSev2Y"
+    },
+    {
+      "nome": "Preto",
+      "classe": "Clérigo",
+      "raca": "Humano",
+      "nivel": "12",
+      "id": "oivGnRns00Q"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
