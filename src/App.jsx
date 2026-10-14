@@ -1,14 +1,14 @@
 import Header from "./Components/Header"
-import "./global.css"
+import Footer from "./Components/Footer"
 import Router from "./Router"
-import Home from "./Pages/Home"
+import "./global.css"
 function App() {
 
   return (
     <div className="app">
-      <Router/>
       <Header/>
-      <Home/>
+      <Router/>
+      <Footer/>
     </div>
   )
 }

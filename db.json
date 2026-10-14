@@ -1,0 +1,48 @@
+{
+  "sobre": [
+    {
+      "id": "1",
+      "titulo": "Sobre o Projeto",
+      "conteudo": "O RPG Master é uma aplicação React com tema de RPG que consome dados de um JSON Server."
+    },
+    {
+      "id": "2",
+      "titulo": "Objetivo",
+      "conteudo": "O objetivo é praticar componentes, rotas, useState, useEffect e fetch, criando uma lista de jogos e um cadastro de personagens."
+    }
+  ],
+  "jogos": [
+    {
+      "id": "1",
+      "nome": "Dungeons & Dragons",
+      "descricao": "O RPG de mesa mais famoso do mundo, com magos, guerreiros e muitos dragões."
+    },
+    {
+      "id": "2",
+      "nome": "Tormenta20",
+      "descricao": "RPG brasileiro de fantasia ambientado no mundo de Arton."
+    },
+    {
+      "id": "3",
+      "nome": "Call of Cthulhu",
+      "descricao": "RPG de investigação e terror baseado nas histórias de H. P. Lovecraft."
+    }
+  ],
+  "personagens": [
+    {
+      "id": "1",
+      "nome": "Aragorn",
+      "classe": "Guerreiro",
+      "raca": "Humano",
+      "nivel": "5"
+    },
+    {
+      "id": "2",
+      "nome": "Gandalf",
+      "classe": "Mago",
+      "raca": "Maia",
+      "nivel": "20"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

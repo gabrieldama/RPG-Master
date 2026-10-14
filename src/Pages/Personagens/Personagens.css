@@ -1,0 +1,109 @@
+.cadastro-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  color: #12263a;
+}
+
+.cadastro-title {
+  margin-bottom: 20px;
+  color: #12263a;
+  font-size: 28px;
+}
+
+.form-card {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-control label {
+  font-weight: 600;
+}
+
+.form-control input,
+.form-control select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-button {
+  padding: 12px 20px;
+  background: #5a5756;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+.lista-personagens {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.lista-personagens h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+    font-size: 28px;
+}
+
+.content-personagens {
+    padding: 20px;
+    margin-bottom: 15px;
+
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+
+    color: #333;
+    line-height: 1.8;
+}
+
+.content-personagens strong {
+    font-size: 16px;
+}
+
+.content-personagens hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.delete {
+    margin-top: 15px;
+    padding: 9px 18px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #dc3545;
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.delete:hover {
+    background-color: #b02a37;
+    transform: translateY(-1px);
+}
