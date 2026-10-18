@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Card from '../../Components/Card'
 import './Personagens.css'
 
 export default function Personagens() {
@@ -124,26 +125,19 @@ export default function Personagens() {
                 )}
 
                 {personagens.map((personagem) => (
-                    <article className="content-personagens" key={personagem.id}>
-                        <strong>Nome: {personagem.nome}</strong>
-                        <br/>
-                        <strong>Classe: {personagem.classe}</strong>
-                        <br/>
-                        <strong>Raça: {personagem.raca}</strong>
-                        <br/>
-                        <strong>Nível: {personagem.nivel}</strong>
-                        <br/>
-                        <strong>Vida: {personagem.vida || '-'}</strong>
-                        <br/>
-                        <strong>Força: {personagem.forca || '-'}</strong>
-                        <br/>
-                        <strong>Destreza: {personagem.destreza || '-'}</strong>
-                        <br/>
-                        <button
-                            onClick={() => deletePersonagem(personagem.id)}
-                            className="delete">Deletar
-                        </button>
-                    </article>
+                    <Card
+                        key={personagem.id}
+                        campos={[
+                            { nome: 'Nome', valor: personagem.nome },
+                            { nome: 'Classe', valor: personagem.classe },
+                            { nome: 'Raça', valor: personagem.raca },
+                            { nome: 'Nível', valor: personagem.nivel },
+                            { nome: 'Vida', valor: personagem.vida },
+                            { nome: 'Força', valor: personagem.forca },
+                            { nome: 'Destreza', valor: personagem.destreza },
+                        ]}
+                        onDelete={() => deletePersonagem(personagem.id)}
+                    />
                 ))}
             </section>
             <ToastContainer />
