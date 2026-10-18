@@ -114,7 +114,10 @@ export default function Personagens() {
             </section>
 
             <section className="lista-personagens">
-                <h1>Lista de Personagens</h1>
+                <div className="lista-titulo">
+                    <h1>Lista de Personagens</h1>
+                    <span className="contador">{personagens.length}</span>
+                </div>
 
                 {personagens.length === 0 && (
                     <p className="mensagem-vazia">Ainda não há personagens.</p>

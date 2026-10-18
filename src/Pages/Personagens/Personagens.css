@@ -113,3 +113,23 @@
     padding: 12px 0;
     color: #666;
 }
+
+.lista-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.lista-titulo h1 {
+    margin-bottom: 0;
+}
+
+.contador {
+    padding: 4px 12px;
+    background: #5a5756;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 16px;
+}
