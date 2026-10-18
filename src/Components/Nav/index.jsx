@@ -28,6 +28,9 @@ function index() {
             <li>
                 <Link to="/mesas">Mesas</Link>
             </li>
+            <li>
+                <Link to="/dados">Dados</Link>
+            </li>
         </ul>
     </nav>
   )
