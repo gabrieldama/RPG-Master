@@ -107,3 +107,9 @@
     background-color: #b02a37;
     transform: translateY(-1px);
 }
+
+.mensagem-vazia {
+    text-align: center;
+    padding: 12px 0;
+    color: #666;
+}

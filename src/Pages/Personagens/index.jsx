@@ -116,6 +116,10 @@ export default function Personagens() {
             <section className="lista-personagens">
                 <h1>Lista de Personagens</h1>
 
+                {personagens.length === 0 && (
+                    <p className="mensagem-vazia">Ainda não há personagens.</p>
+                )}
+
                 {personagens.map((personagem) => (
                     <article className="content-personagens" key={personagem.id}>
                         <strong>Nome: {personagem.nome}</strong>
