@@ -22,6 +22,9 @@ function index() {
             <li>
                 <Link to="/faq">FAQ</Link>
             </li>
+            <li>
+                <Link to="/cadastroNews">News</Link>
+            </li>
         </ul>
     </nav>
   )
