@@ -8,6 +8,9 @@ export default function Personagens() {
     const [classe, setClasse] = useState('Guerreiro')
     const [raca, setRaca] = useState('Humano')
     const [nivel, setNivel] = useState('1')
+    const [vida, setVida] = useState('10')
+    const [forca, setForca] = useState('10')
+    const [destreza, setDestreza] = useState('10')
     const [personagens, setPersonagens] = useState([])
 
     useEffect(() => {
@@ -28,7 +31,7 @@ export default function Personagens() {
         fetch('http://localhost:3000/personagens', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ nome, classe, raca, nivel }),
+                body: JSON.stringify({ nome, classe, raca, nivel, vida, forca, destreza }),
             })
             .then((response) => {
                 if (!response.ok) throw new Error('Falha no cadastro')
@@ -40,6 +43,9 @@ export default function Personagens() {
                 setClasse('Guerreiro')
                 setRaca('Humano')
                 setNivel('1')
+                setVida('10')
+                setForca('10')
+                setDestreza('10')
                 toast.success('Personagem criado com sucesso.')
             })
             .catch(() => {
@@ -91,6 +97,18 @@ export default function Personagens() {
                         <label htmlFor="nivel">Nível</label>
                         <input id="nivel" type="number" min="1" max="20" value={nivel} onChange={(event) => setNivel(event.target.value)} required />
                     </div>
+                    <div className="form-control">
+                        <label htmlFor="vida">Vida</label>
+                        <input id="vida" type="number" min="1" value={vida} onChange={(event) => setVida(event.target.value)} required />
+                    </div>
+                    <div className="form-control">
+                        <label htmlFor="forca">Força</label>
+                        <input id="forca" type="number" min="1" max="30" value={forca} onChange={(event) => setForca(event.target.value)} required />
+                    </div>
+                    <div className="form-control">
+                        <label htmlFor="destreza">Destreza</label>
+                        <input id="destreza" type="number" min="1" max="30" value={destreza} onChange={(event) => setDestreza(event.target.value)} required />
+                    </div>
                     <button className="form-button" type="submit">Criar personagem</button>
                 </form>
             </section>
@@ -107,6 +125,12 @@ export default function Personagens() {
                         <strong>Raça: {personagem.raca}</strong>
                         <br/>
                         <strong>Nível: {personagem.nivel}</strong>
+                        <br/>
+                        <strong>Vida: {personagem.vida || '-'}</strong>
+                        <br/>
+                        <strong>Força: {personagem.forca || '-'}</strong>
+                        <br/>
+                        <strong>Destreza: {personagem.destreza || '-'}</strong>
                         <br/>
                         <button
                             onClick={() => deletePersonagem(personagem.id)}
