@@ -6,6 +6,7 @@ import Jogos from './Pages/Jogos'
 import Personagens from './Pages/Personagens'
 import FAQ from './Pages/FAQ'
 import CadastroNews from './Pages/CadastroNews'
+import Mesas from './Pages/Mesas'
 import NotFound from './Pages/NotFound'
 
 function Router(){
@@ -19,6 +20,7 @@ function Router(){
                 <Route path="/personagens" element={<Personagens />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/cadastroNews" element={<CadastroNews />} />
+                <Route path="/mesas" element={<Mesas />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>

@@ -25,6 +25,9 @@ function index() {
             <li>
                 <Link to="/cadastroNews">News</Link>
             </li>
+            <li>
+                <Link to="/mesas">Mesas</Link>
+            </li>
         </ul>
     </nav>
   )
