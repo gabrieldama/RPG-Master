@@ -19,6 +19,9 @@ function index() {
             <li>
                 <Link to="/personagens">Personagens</Link>
             </li>
+            <li>
+                <Link to="/faq">FAQ</Link>
+            </li>
         </ul>
     </nav>
   )
