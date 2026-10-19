@@ -1,14 +1,23 @@
 import { useState } from 'react'
+import imgDado from '../../assets/img/jogos.png'
 import './Dados.css'
 
+const tiposDeDado = [4, 6, 8, 10, 12, 20]
+
 function Dados() {
+    const [lados, setLados] = useState(20)
     const [resultado, setResultado] = useState(null)
     const [historico, setHistorico] = useState([])
 
+    const escolherDado = (tipo) => {
+        setLados(tipo)
+        setResultado(null)
+    }
+
     const rolarDado = () => {
-        const numero = Math.floor(Math.random() * 20) + 1
+        const numero = Math.floor(Math.random() * lados) + 1
         setResultado(numero)
-        setHistorico([numero].concat(historico).slice(0, 10))
+        setHistorico([{ lados, numero }].concat(historico).slice(0, 10))
     }
 
     return (
@@ -16,13 +25,26 @@ function Dados() {
             <h1 className="dados-title">Rolador de dados</h1>
 
             <div className="dados-card">
-                <p className="dados-legenda">Dado de 20 lados (d20)</p>
-                <div className="dados-resultado">
-                    {resultado === null ? '?' : resultado}
+                <p className="dados-legenda">Escolha o dado</p>
+                <div className="dados-tipos">
+                    {tiposDeDado.map((tipo) => (
+                        <button
+                            key={tipo}
+                            className={tipo === lados ? 'dados-tipo dados-tipo-ativo' : 'dados-tipo'}
+                            onClick={() => escolherDado(tipo)}>
+                            d{tipo}
+                        </button>
+                    ))}
                 </div>
-                {resultado === 20 && <p className="dados-critico">Acerto crítico!</p>}
-                {resultado === 1 && <p className="dados-falha">Falha crítica!</p>}
-                <button className="dados-botao" onClick={rolarDado}>Rolar d20</button>
+
+                <div className="dados-resultado">
+                    <img className="dados-imagem" src={imgDado} alt={`Dado de ${lados} lados`} />
+                    <span className="dados-numero">{resultado === null ? '?' : resultado}</span>
+                </div>
+
+                {lados === 20 && resultado === 20 && <p className="dados-critico">Acerto crítico!</p>}
+                {lados === 20 && resultado === 1 && <p className="dados-falha">Falha crítica!</p>}
+                <button className="dados-botao" onClick={rolarDado}>Rolar d{lados}</button>
             </div>
 
             <div className="dados-card">
@@ -31,8 +53,8 @@ function Dados() {
                     <p className="dados-vazio">Ainda não há rolamentos.</p>
                 ) : (
                     <ul className="dados-historico">
-                        {historico.map((numero, indice) => (
-                            <li key={indice}>{numero}</li>
+                        {historico.map((rolagem, indice) => (
+                            <li key={indice}>d{rolagem.lados}: {rolagem.numero}</li>
                         ))}
                     </ul>
                 )}
