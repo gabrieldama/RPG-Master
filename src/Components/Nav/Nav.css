@@ -9,6 +9,7 @@ nav {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -35,6 +36,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -42,4 +44,14 @@ nav {
     height: 50px;
     width: auto;
     border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .menu li {
+        margin: 0 2px;
+    }
+
+    .menu a {
+        padding: 10px 12px;
+    }
 }
