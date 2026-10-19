@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <rect width="200" height="200" rx="16" fill="#261d1b"/>
-  <polygon points="100,30 160,65 160,135 100,170 40,135 40,65" fill="#8f1d1d" stroke="#b9975b" stroke-width="6" stroke-linejoin="round"/>
-  <polyline points="40,65 100,100 160,65" fill="none" stroke="#b9975b" stroke-width="5"/>
-  <line x1="100" y1="100" x2="100" y2="170" stroke="#b9975b" stroke-width="5"/>
-  <text x="100" y="128" font-family="Trebuchet MS, sans-serif" font-size="30" font-weight="bold" fill="#f8f4ec" text-anchor="middle">20</text>
-</svg>

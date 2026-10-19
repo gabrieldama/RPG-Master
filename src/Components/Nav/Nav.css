@@ -41,4 +41,5 @@ nav {
 .logo {
     height: 50px;
     width: auto;
+    border-radius: 6px;
 }

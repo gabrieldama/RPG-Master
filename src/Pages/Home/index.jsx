@@ -1,7 +1,7 @@
 import Box from "../../Components/Box"
-import imgJogos from "../../assets/img/jogos.svg"
-import imgPersonagens from "../../assets/img/personagens.svg"
-import imgSobre from "../../assets/img/sobre.svg"
+import imgJogos from "../../assets/img/jogos.png"
+import imgPersonagens from "../../assets/img/personagens.png"
+import imgSobre from "../../assets/img/sobre.png"
 
 
 function index() {

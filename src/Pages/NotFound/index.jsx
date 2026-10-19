@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "./notFound.css"
-import notFoundImage from "../../assets/img/RPG.svg"
+import notFoundImage from "../../assets/img/nao-encontrado.png"
 
 function index() {
   return (
