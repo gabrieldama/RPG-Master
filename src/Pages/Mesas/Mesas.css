@@ -2,7 +2,7 @@
   max-width: 800px;
   margin: 40px auto;
   padding: 24px;
-  color: #12263a;
+  color: var(--text);
 }
 
 .mesas-title {
@@ -12,10 +12,10 @@
 
 .mesas-form {
   padding: 24px;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
 }
 
 .mesas-field {
@@ -32,14 +32,14 @@
 .mesas-field input {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: 4px;
   font-size: 1rem;
 }
 
 .mesas-submit {
   padding: 12px 20px;
-  background: #5a5756;
+  background: var(--accent);
   border: none;
   border-radius: 4px;
   color: #fff;
@@ -51,9 +51,9 @@
   max-width: 800px;
   margin: 40px auto;
   padding: 30px;
-  background-color: #ffffff;
+  background-color: var(--surface);
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
 }
 
 .mesas-lista-titulo {
@@ -65,13 +65,13 @@
 }
 
 .mesas-lista-titulo h1 {
-  color: #222;
+  color: var(--gold);
   font-size: 28px;
 }
 
 .mesas-contador {
   padding: 4px 12px;
-  background: #5a5756;
+  background: var(--accent);
   border-radius: 999px;
   color: #fff;
   font-size: 16px;
@@ -80,5 +80,5 @@
 .mesas-vazia {
   text-align: center;
   padding: 12px 0;
-  color: #666;
+  color: var(--text-soft);
 }

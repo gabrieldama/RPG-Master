@@ -5,10 +5,38 @@
     list-style: none;
 }
 
+:root {
+    --bg: #120e0d;
+    --surface: #1c1615;
+    --surface-2: #261d1b;
+    --border: #3b2d2a;
+    --text: #e9dfd0;
+    --text-soft: #a99b8a;
+    --accent: #8f1d1d;
+    --accent-hover: #b32626;
+    --gold: #b9975b;
+    color-scheme: dark;
+}
+
 body {
-    background: #f8f4ec;
-    color: #12263a;
+    background: var(--bg);
+    color: var(--text);
     font-family: 'Trebuchet MS', sans-serif;
+}
+
+h1, h2 {
+    color: var(--gold);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+}
+
+input, select {
+    background: var(--bg);
+    color: var(--text);
+}
+
+button {
+    transition: background-color 0.2s;
 }
 
 .app {

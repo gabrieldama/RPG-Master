@@ -1,6 +1,7 @@
 
 nav {
-    background-color: #aaa7a6;
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
 }
 
 .menu {
@@ -20,14 +21,15 @@ nav {
 }
 
 .menu a {
-    color: white;
+    color: var(--text);
     text-decoration: none;
     padding: 10px 20px;
     display: block;
 }
 
 .menu a:hover {
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid var(--gold);
+    color: var(--gold);
 }
 nav {
     display: flex;

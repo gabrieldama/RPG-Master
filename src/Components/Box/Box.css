@@ -2,9 +2,9 @@
   max-width: 280px;
   text-align: center;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
   margin-top: 40px;
 }
 
@@ -17,12 +17,12 @@
 .title-box {
   font-size: 18px;
   margin: 10px 0;
-  color: #333;
+  color: var(--text);
 }
 
 .description {
   font-size: 16px;
-  color: #666;
+  color: var(--text-soft);
   margin-bottom: 20px;
 }
 
@@ -34,8 +34,8 @@
 .box {
   width: 45%;
   padding: 10px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 4px;
   text-align: center;
 }

@@ -2,21 +2,21 @@
   max-width: 800px;
   margin: 40px auto;
   padding: 24px;
-  color: #12263a;
+  color: var(--text);
 }
 
 .cadastro-title {
   margin-bottom: 20px;
-  color: #12263a;
+  color: var(--gold);
   font-size: 28px;
 }
 
 .form-card {
   padding: 24px;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
 }
 
 .form-control {
@@ -34,14 +34,14 @@
 .form-control select {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: 4px;
   font-size: 1rem;
 }
 
 .form-button {
   padding: 12px 20px;
-  background: #5a5756;
+  background: var(--accent);
   border: none;
   border-radius: 4px;
   color: #fff;
@@ -53,22 +53,22 @@
     margin: 40px auto;
     padding: 30px;
 
-    background-color: #ffffff;
+    background-color: var(--surface);
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
 }
 
 .lista-personagens h1 {
     text-align: center;
     margin-bottom: 30px;
-    color: #222;
+    color: var(--gold);
     font-size: 28px;
 }
 
 .mensagem-vazia {
     text-align: center;
     padding: 12px 0;
-    color: #666;
+    color: var(--text-soft);
 }
 
 .lista-titulo {
@@ -85,7 +85,7 @@
 
 .contador {
     padding: 4px 12px;
-    background: #5a5756;
+    background: var(--accent);
     border-radius: 999px;
     color: #fff;
     font-size: 16px;

@@ -2,7 +2,7 @@
   max-width: 800px;
   margin: 40px auto;
   padding: 24px;
-  color: #12263a;
+  color: var(--text);
 }
 
 .newsletter-title {
@@ -12,10 +12,10 @@
 
 .newsletter-form {
   padding: 24px;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
 }
 
 .newsletter-field {
@@ -28,7 +28,7 @@
 .newsletter-field input {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: 4px;
   font-size: 1rem;
 }
@@ -37,7 +37,7 @@
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
-  background: #5a5756;
+  background: var(--accent);
   color: #fff;
   cursor: pointer;
 }
@@ -61,7 +61,7 @@
   justify-content: space-between;
   gap: 12px;
   padding: 12px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border);
 }
 
 .newsletter-message {
