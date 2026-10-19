@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react"
 import "./Sobre.css"
+import imgSobre from "../../assets/img/sobre.png"
+import imgJogos from "../../assets/img/jogos.png"
+
+const imagens = {
+  1: imgSobre,
+  2: imgJogos,
+}
 
 function Sobre() {
   const [about, setAbout] = useState([]);
@@ -17,10 +24,15 @@ function Sobre() {
 
       {about.map((item) => (
         <div className="about-item" key={item.id}>
-          <h2 className="about-title">{item.titulo}</h2>
-          <p className="about-description">
-            {item.conteudo}
-          </p>
+          {imagens[item.id] && (
+            <img className="about-image" src={imagens[item.id]} alt={item.titulo} />
+          )}
+          <div className="about-text">
+            <h2 className="about-title">{item.titulo}</h2>
+            <p className="about-description">
+              {item.conteudo}
+            </p>
+          </div>
         </div>
       ))}
 
