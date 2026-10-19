@@ -81,6 +81,12 @@
       "nome": "Noite em Arton",
       "jogo": "Tormenta20",
       "dia": "2026-11-14"
+    },
+    {
+      "nome": "Mesa Infaernum",
+      "jogo": "Infaernum RPG",
+      "dia": "2026-10-19",
+      "id": "Fp86uvyGrts"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
