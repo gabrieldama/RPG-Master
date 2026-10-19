@@ -1,16 +1,30 @@
-# React + Vite
+# RPG Master
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto React feito em aula, com tema de RPG. Tem páginas de Início, Sobre, Jogos,
+Personagens, FAQ, News, Mesas e Dados. Os dados vêm de um JSON Server (`db.json`).
 
-Currently, two official plugins are available:
+## Como rodar no computador
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Precisa de Node 20.19+ (ou 22.12+). Em dois terminais, dentro da pasta do projeto:
 
-## React Compiler
+```
+npm install
+npm run server   # JSON Server em http://localhost:3000
+npm run dev      # site em http://localhost:5173
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Hospedagem no Vercel
 
-## Expanding the ESLint configuration
+O site e a API ficam no mesmo projeto do Vercel:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- o site (Vite) é publicado normalmente;
+- a pasta `api/` roda o JSON Server como função do Vercel, em `/api/...`;
+- o arquivo `vercel.json` faz as rotas do React funcionarem ao recarregar a página.
+
+Para publicar: no Vercel, **Add New > Project**, importe este repositório do GitHub
+e clique em **Deploy** (sem mudar nenhuma configuração).
+
+**Atenção:** o Vercel não grava arquivos. Na hospedagem, o `db.json` é carregado na
+memória: o que for cadastrado ou deletado funciona, mas volta ao conteúdo do
+`db.json` quando o servidor reinicia (e pode variar entre acessos). Para guardar os
+dados de verdade, seria preciso usar um banco de dados.
