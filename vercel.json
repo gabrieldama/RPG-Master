@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/[...slug].js": {
+      "includeFiles": "{db.json,public/**}"
+    }
+  },
+  "rewrites": [
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
