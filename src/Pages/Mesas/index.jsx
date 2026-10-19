@@ -3,8 +3,9 @@ import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Card from '../../Components/Card'
 import './Mesas.css'
+import API from '../../api'
 
-const endpoint = 'http://localhost:3000/mesas'
+const endpoint = `${API}/mesas`
 
 function Mesas() {
     const [nome, setNome] = useState('')

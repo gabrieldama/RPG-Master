@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import "./FAQ.css"
+import API from '../../api'
 
 function FAQ() {
   const [faqItems, setFaqItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/faq")
+    fetch(`${API}/faq`)
       .then((response) => response.json())
       .then((data) => setFaqItems(data))
       .catch((error) => console.log(error));

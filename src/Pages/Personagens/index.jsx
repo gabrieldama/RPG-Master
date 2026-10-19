@@ -3,6 +3,7 @@ import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Card from '../../Components/Card'
 import './Personagens.css'
+import API from '../../api'
 
 export default function Personagens() {
     const [nome, setNome] = useState('')
@@ -15,7 +16,7 @@ export default function Personagens() {
     const [personagens, setPersonagens] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/personagens')
+        fetch(`${API}/personagens`)
             .then((response) => response.json())
             .then((data) => setPersonagens(data))
             .catch((error) => console.log(error))
@@ -29,7 +30,7 @@ export default function Personagens() {
             return
         }
 
-        fetch('http://localhost:3000/personagens', {
+        fetch(`${API}/personagens`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nome, classe, raca, nivel, vida, forca, destreza }),
@@ -55,7 +56,7 @@ export default function Personagens() {
     }
 
     const deletePersonagem = (id) => {
-        fetch(`http://localhost:3000/personagens/${id}`, {
+        fetch(`${API}/personagens/${id}`, {
             method: 'DELETE'
         })
         .then(() => {

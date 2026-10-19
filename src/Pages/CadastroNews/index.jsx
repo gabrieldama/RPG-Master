@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import './CadastroNews.css'
+import API from '../../api'
 
-const endpoint = 'http://localhost:3000/cadastroNews'
+const endpoint = `${API}/cadastroNews`
 
 export default function CadastroNews() {
   const [nome, setNome] = useState('')

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import "./Jogos.css"
+import API from '../../api'
 
 function Jogos() {
   const [jogos, setJogos] = useState([]);
@@ -9,7 +10,7 @@ function Jogos() {
   const [descricao, setDescricao] = useState('');
 
   useEffect(() => {
-    fetch("http://localhost:3000/jogos")
+    fetch(`${API}/jogos`)
       .then((response) => response.json())
       .then((data) => setJogos(data))
       .catch((error) => console.log(error));
@@ -23,7 +24,7 @@ function Jogos() {
       return
     }
 
-    fetch("http://localhost:3000/jogos", {
+    fetch(`${API}/jogos`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nome, descricao }),
@@ -42,7 +43,7 @@ function Jogos() {
   }
 
   const deleteJogo = (id) => {
-    fetch(`http://localhost:3000/jogos/${id}`, {
+    fetch(`${API}/jogos/${id}`, {
       method: "DELETE"
     })
     .then(() => {

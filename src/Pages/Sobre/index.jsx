@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import "./Sobre.css"
 import imgSobre from "../../assets/img/sobre.png"
 import imgJogos from "../../assets/img/jogos.png"
+import API from '../../api'
 
 const imagens = {
   1: imgSobre,
@@ -12,7 +13,7 @@ function Sobre() {
   const [about, setAbout] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/sobre")
+    fetch(`${API}/sobre`)
       .then((response) => response.json())
       .then((data) => setAbout(data))
       .catch((error) => console.log(error));
