@@ -1,12 +1,4 @@
 @font-face {
-    font-family: 'Black Flag';
-    src: url('./assets/fonts/BlackFlag.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'Seagram';
     src: url('./assets/fonts/Seagram.ttf') format('truetype');
     font-weight: normal;
